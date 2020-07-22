@@ -1,0 +1,55 @@
+
+Emotional Analysis Algorithim
+
+* Step 1:
+ Import all the necessary libraries for the algorithm .
+
+* Step 2: 
+Open “matter.txt” file into variable “text”.
+Open “emotions.txt” file into variable “emotions”
+
+* Step 3:
+Splitting the text in emotions variable into words and their emotions separately.
+Stored the words in “words_list”
+Stored the emotions in “emotions_list” 
+
+* Step 4:
+Stemming the “words_list” and storing in
+“stemmed_words_list” 
+
+* Step 5:
+Open “abbreviations.txt” file in variable “abbreviations”
+
+Splitting the abbreviations and there full forms in separate variables.
+
+Abbreviations in “filter_list” and full forms in “mean_list”
+
+* Step 6:
+Performed emotional analysis on each full form in “mean_list” and replaced it with the emotion.
+* Step 7:
+Open “sarcasm.txt” file in variable “text1”
+
+Separating the emotion and their sarcastic opposite emotion in “text1” in 2 variables
+“sarcasm” and ” oppemo”
+
+* Step 8:
+Sentence tokenizing the “text” and storing in the variable “sents”
+
+Dividing the sentence into 2 halfs [‘divi1’ & ‘divi2’]
+And checking the sentiment in each.
+
+If the sentiment shifts from positive to negative as we move from one half of the sentence to the other.
+       Then search for the positive word in first half by using SentimentIntensityAnalyzer().polarity_scores(divi1) and replace it with its opposite emotion.
+        
+Else just leave the sentence as it is.
+And add the two sentences[divi1 + divi2].
+
+* Step 9:
+Cleaning the text of stop words and punctuations.
+
+Tokenizing the text and storing in “tokenized_text”
+
+Replacing the abbreviations with their emotions.
+
+* Step 10:
+Counting all the emotions in the text and plotting graph.
